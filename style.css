@@ -1,0 +1,48 @@
+/* Thiết lập font và hành vi cuộn */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Định dạng chung cho padding của các section */
+.section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Padding lớn hơn cho màn hình từ tablet trở lên */
+@media (min-width: 768px) {
+    .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+/* CSS cho các icon ở footer (đảm bảo màu trắng trên nền đen) */
+.social-icon {
+    filter: invert(90%) sepia(10%) saturate(100%) hue-rotate(180deg) brightness(100%) contrast(90%);
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* === CẬP NHẬT CĂN CHỈNH LOGO === */
+
+/* Thiết lập khung chứa logo */
+#doi-tac .grid .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* Tăng chiều cao của khung chứa để có không gian */
+    padding: 0.5rem; /* Giảm padding để logo có nhiều không gian hơn */
+    box-sizing: border-box;
+}
+
+/* Thiết lập kích thước đồng đều cho logo */
+#doi-tac .grid img {
+    height: 45px;   /* Đặt chiều cao CỐ ĐỊNH cho tất cả logo */
+    width: auto;    /* Chiều rộng tự động điều chỉnh theo tỷ lệ */
+    max-width: 100%; /* Đảm bảo logo không bị tràn ra ngoài khung */
+}
